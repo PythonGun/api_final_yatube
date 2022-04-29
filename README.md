@@ -14,16 +14,107 @@
 ###### python manage.py migrate
 ##### Запускаем проект:
 ###### python manage.py runserver
-## Примеры
-#### Проект буден доступен по адресу http://127.0.0.1:8000/
 
-##### api/v1/posts/:
-###### POST /api/v1/posts/ - создание публикации
-###### PUT /api/v1/posts/{id}/ - обновление публикации
+# Примеры
+## Cоздаём пользователя
+_post .../api/v1/users/_
+```python
+{
+    "username": "newadmin",
+    "password": "admin12345
+}
+```
+
+Пример ответа:
+```python
+{
+    "email": "",
+    "username": "newadmin",
+    "id": 2
+}
+```
+
+## Получение токена
+_post .../api/v1/jwt/create/_
+```python
+{
+    "username": "newadmin",
+    "password": "admin12345
+}
+```
+
+Пример ответа:
+```python
+{
+    "refresh": "eyJ0eXAiOiJ...",
+    "access": "eyJ0eXAiOiJK..."
+}
+```
+
+#### Проект буден доступен по адресу http://127.0.0.1:8000/
+## api/v1/posts/:
+_POST .../api/v1/posts/_ - создание публикации
+
+```python
+{
+    "text": "new text"
+}
+
+```
+
+Пример ответа:
+```python
+{
+    "id": 1,
+    "author": "newadmin",
+    "text": "new text",
+    "pub_date": "2022-04-29T07:09:58.007266Z",
+    "image": null,
+    "group": null
+}
+```
+
+_PUT /api/v1/posts/{id}/_ - обновление публикации
+
+```python
+{
+    "text": "new text/ add new text"
+}
+```
+
+Пример ответа:
+```python
+{
+    "id": 1,
+    "author": "newadmin",
+    "text": "new text/ add new text",
+    "pub_date": "2022-04-29T07:09:58.007266Z",
+    "image": null,
+    "group": null
+}
+```
+
 ###### PATCH /api/v1/posts/{id}/ - частичное обновление публикации
 ###### DEL /api/v1/posts/{id}/ - удаление публикации
 ######
-###### GET api/v1/posts/ - получить список всех публикаций.
+
+_GET api/v1/posts/_ - получить список всех публикаций.
+```python
+
+Пример ответа:
+```python
+[
+    {
+        "id": 1,
+        "author": "newadmin",
+        "text": "new text/ add new text",
+        "pub_date": "2022-04-29T07:09:58.007266Z",
+        "image": null,
+        "group": null
+    }
+]
+```
+
 ###### GET api/v1/posts/{id}/ - получение публикации по id
 
 ##### api/v1/groups/:
@@ -31,7 +122,7 @@
 ###### GET api/v1/groups/{id}/ - получение информации о сообществе по id
 
 
-##### api/v1/posts/{post_id}/comments/:
+## api/v1/posts/{post_id}/comments/:
 ###### GET api/v1/{post_id}/comments/ - получение всех комментариев к публикации
 ###### GET api/v1/{post_id}/comments/{id}/ - Получение комментария к публикации по id
 
