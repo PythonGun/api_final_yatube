@@ -1,7 +1,18 @@
 # Социальная сеть Yatube по API
 ## Описание
-###### Этот проект позволяет использовать функционал приложения не посещая сайт, и на основе api-запросов можно создавать смарт-приложения для всех мобильных платформ. В этом проекте можно писать посты, объединять их в группы, комментировать их и подписываться на авторов.
+###### Этот проект позволяет использовать функционал приложения не посещая сайт, и на основе api-запросов. В этом проекте можно писать посты, комментировать их и подписываться/отписываться от авторов.
+
+### Используется:
+
+[![Python](https://img.shields.io/badge/-Python_3.7.9-464646??style=flat-square&logo=Python)](https://www.python.org/downloads/)
+[![Django](https://img.shields.io/badge/-Django-464646??style=flat-square&logo=Django)](https://www.djangoproject.com/)
+[![Django](https://img.shields.io/badge/-Django_rest_framework_3.12.4-464646??style=flat-square&logo=Django)](https://www.django-rest-framework.org)
+[![Django](https://img.shields.io/badge/-djoser_2.1.0-464646??style=flat-square&logo=Django)](https://djoser.readthedocs.io/en/latest/getting_started.html#installation)
+
 ## Установка
+_на Mac или Linux используем Bash_
+_Для Windows PowerShell_
+
 ##### Клонируем репозиторий на локальную машину:
 ###### https://github.com/PythonGun/api_final_yatube
 ###### git clone git@github.com:PythonGun/api_final_yatube.git
@@ -27,7 +38,7 @@ _для Windows_
 # Примеры
 ## Cоздаём пользователя
 _post .../api/v1/users/_
-```python
+```
 {
     "username": "newadmin",
     "password": "admin12345
@@ -35,7 +46,7 @@ _post .../api/v1/users/_
 ```
 
 Пример ответа:
-```python
+```
 {
     "email": "",
     "username": "newadmin",
@@ -45,7 +56,7 @@ _post .../api/v1/users/_
 
 ## Получение токена
 _post .../api/v1/jwt/create/_
-```python
+```
 {
     "username": "newadmin",
     "password": "admin12345
@@ -53,7 +64,7 @@ _post .../api/v1/jwt/create/_
 ```
 
 Пример ответа:
-```python
+```
 {
     "refresh": "eyJ0eXAiOiJ...",
     "access": "eyJ0eXAiOiJK..."
@@ -64,7 +75,7 @@ _post .../api/v1/jwt/create/_
 ## api/v1/posts/:
 _POST .../api/v1/posts/_ - создание публикации
 
-```python
+```
 {
     "text": "new text"
 }
@@ -72,7 +83,7 @@ _POST .../api/v1/posts/_ - создание публикации
 ```
 
 Пример ответа:
-```python
+```
 {
     "id": 1,
     "author": "newadmin",
@@ -85,14 +96,14 @@ _POST .../api/v1/posts/_ - создание публикации
 
 _PUT /api/v1/posts/{id}/_ - обновление публикации
 
-```python
+```
 {
     "text": "new text/ add new text"
 }
 ```
 
 Пример ответа:
-```python
+```
 {
     "id": 1,
     "author": "newadmin",
@@ -140,10 +151,5 @@ _GET api/v1/posts/_ - получить список всех публикаци�
 
 #### Ознакомиться с полным функционалом и примерами можно по адресу http://127.0.0.1:8000/redoc (доступен после запуска проекта)
 
-### Потребуется:
-
-[![Python](https://img.shields.io/badge/-Python_3.7.9-464646??style=flat-square&logo=Python)](https://www.python.org/downloads/)
-[![Django](https://img.shields.io/badge/-Django-464646??style=flat-square&logo=Django)](https://www.djangoproject.com/)
-[![Django](https://img.shields.io/badge/-Django_rest_framework_3.12.4-464646??style=flat-square&logo=Django)](https://www.django-rest-framework.org)
-[![Django](https://img.shields.io/badge/-djoser_2.1.0-464646??style=flat-square&logo=Django)](https://djoser.readthedocs.io/en/latest/getting_started.html#installation)
-
+## Автор
+Денис Баринов
