@@ -10,47 +10,6 @@
 ###### Этот проект позволяет использовать функционал приложения не посещая сайт, и на основе api-запросов. В этом проекте можно писать посты, комментировать их и подписываться/отписываться от авторов.
 
 
-# Установка
-<details><summary>Установка</summary>
- 
-_На Mac или Linux используем Bash_
-_Для Windows PowerShell_
-
-#### Клонируем репозиторий на локальную машину:
-```
-https://github.com/PythonGun/api_yamdb
-git clone git@github.com:PythonGun/api_yamdb.git
-```
-
-#### Создаем и активируем виртуальное окружение:
-Для Mac или Linux
-```
-python3 -m venv venv
-source venv/bin/activate
-```
-
-Для Windows
-```
-python -m venv venv
-source venv/Scripts/activate
-```
-
-#### Устанавливаем зависимости:
-```
-pip install -r requirements.txt
-```
-
-#### Запускаем миграции:
-```
-python manage.py migrate
-```
-
-#### Запускаем проект:
-```
-python manage.py runserver
-</details>
-
- 
 # Примеры запросов
 <details><summary>Примеры запросов</summary>
 
