@@ -50,8 +50,8 @@ python manage.py migrate
 python manage.py runserver
 
 #### Проект буден доступен по адресу http://127.0.0.1:8000/
-</details>
 
+</details>
  
 # Примеры запросов
 <details><summary>Примеры запросов</summary>
