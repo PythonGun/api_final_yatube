@@ -12,12 +12,6 @@
 
 # Установка
 <details><summary>Установка</summary>
-
-_на Mac или Linux используем Bash_
-_Для Windows PowerShell_
-
-# Установка
-<details><summary>Установка</summary>
  
 _На Mac или Linux используем Bash_
 _Для Windows PowerShell_
